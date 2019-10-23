@@ -7,9 +7,7 @@ reads distorted images, calculates the calibration and write undistorted images
 
 import numpy as np
 import cv2
-import sys
 import argparse
-from glob import glob
 import os
 
 parser = argparse.ArgumentParser()

@@ -192,7 +192,7 @@ def es2():
 
 def es3():
     image = cv2.imread(args.img_path)
-    image2project = cv2.imread("/home/pierluigi/Desktop/calibration/stregatto2.jpg") 
+    image2project = cv2.imread("es3/stregatto.jpg") 
 
     h, w = image.shape[0], image.shape[1]
 
@@ -223,6 +223,8 @@ def es3():
     warped = cv2.warpPerspective(image2project, M, (w, h))
 
     warped[warp_mask] = image[warp_mask]
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.show()
 
     plt.imshow(cv2.cvtColor(warped, cv2.COLOR_BGR2RGB))
     plt.show()
@@ -296,5 +298,3 @@ def es4():
 
     plt.imshow(warped)
     plt.show()
-
-es4()
