@@ -8,14 +8,9 @@
 
 # Use this tool to get the **coordinate** of pixels. Modify the variable *image_path* with the absolute path to an image. Run the code below and you will se a pop-up windows opening. Click on a pixel on the image and you will get the coordinate **(row,column)** of that pixel.
 
-# In[1]:
-
-
 # Define here your path
-image_path = "chessboards/0.jpg"
+image_path = "es2/pen.jpg"
 
-
-# In[2]:
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -31,11 +26,8 @@ def onclick(event):
 
 cid = fig.canvas.mpl_connect('button_press_event', onclick)
 
-imgplot = plt.imshow(img)
+imgplot = plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 plt.show()
-
-
-# In[ ]:
 
 
 
