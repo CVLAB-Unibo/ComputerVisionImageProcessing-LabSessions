@@ -6,7 +6,7 @@ docker build . -t cvlab
 Run the docker container with:
 ```
 PATH_TO_EXERCISES=/path/to/excercise
-docker run -v ${PATH_TO_EXERCISES}:/home/cvlab -p 8888:8888 -it cvlab:latest
+docker run -v ${PATH_TO_EXERCISES}:/home/cvlab -p 8888:8888 --device=/dev/video0:/dev/video0 -it cvlab:latest
 ```
 This will launch automatically a jupyter notebook in the exercises directory.  
 Click on the link highlighted in the following picture to open the notebook:
