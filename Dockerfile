@@ -19,5 +19,9 @@ ENV LC_ALL en_US.UTF-8
 # install python dependencies
 RUN pip3 install numpy matplotlib jupyter opencv-python==3.4.2.16 opencv-contrib-python==3.4.2.16
 
+# create dir for cvlab stuff
 RUN mkdir -p /home/cvlab
 WORKDIR "/home/cvlab"
+
+# set default command
+CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
